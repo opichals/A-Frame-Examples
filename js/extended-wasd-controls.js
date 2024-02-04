@@ -119,9 +119,9 @@ AFRAME.registerComponent('extended-wasd-controls', {
 	{
 		let moveAmount = (timeDelta/1000) * this.data.moveSpeed;
 		// need to convert angle measures from degrees to radians
-		let turnAmount = (timeDelta/1000) * THREE.Math.degToRad(this.data.turnSpeed);
-		let lookAmount = (timeDelta/1000) * THREE.Math.degToRad(this.data.lookSpeed);
-		let maxLookAngle = THREE.Math.degToRad(this.data.maxLookAngle);
+		let turnAmount = (timeDelta/1000) * THREE.MathUtils.degToRad(this.data.turnSpeed);
+		let lookAmount = (timeDelta/1000) * THREE.MathUtils.degToRad(this.data.lookSpeed);
+		let maxLookAngle = THREE.MathUtils.degToRad(this.data.maxLookAngle);
 		
 		// rotations
 		

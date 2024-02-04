@@ -663,7 +663,7 @@ AFRAME.registerSystem('physx', {
     if (!this.physXInitialized) return
     if (!this.running) return
 
-    this.scene.simulate(THREE.Math.clamp(dt * this.data.speed / 1000, 0, 0.03 * this.data.speed), true)
+    this.scene.simulate(THREE.MathUtils.clamp(dt * this.data.speed / 1000, 0, 0.03 * this.data.speed), true)
     this.scene.fetchResults(true)
 
     for (let [obj, body] of this.objects)

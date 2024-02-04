@@ -4,8 +4,8 @@
 <head>
 	<title>Fireworks!</title>
 	<meta name="description" content="A-Frame Examples">
-	<script src="js/aframe-master.1.0.4.min.js"></script>
-	<script src="js/aframe-environment-component.min-old.js"></script>
+	<script src="js/aframe-v1.3.0.min.js"></script>
+	<script src="js/aframe-environment-component.min.js"></script>
 	<script src="js/aframe-spe-particles-component.js"></script>
    	<script src="js/aframe-spritesheet-animation.js"></script>
 
@@ -82,8 +82,8 @@ AFRAME.registerComponent('spawner',
 		if ( Math.random() < eventFrequency * deltaSeconds )
 		{
 			console.log( "Firework!" );
-			let angle = THREE.Math.degToRad(270);
-			let angleSpread = THREE.Math.degToRad(90);
+			let angle = THREE.MathUtils.degToRad(270);
+			let angleSpread = THREE.MathUtils.degToRad(90);
 			let angleRadians = angle + randomNormal(-angleSpread, angleSpread); 
 			let radius = 9;
 			let x = radius * Math.cos(angleRadians);
